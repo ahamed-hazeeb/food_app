@@ -1,0 +1,168 @@
+:root {
+    --background-color:#fff;
+    --background-light:fff;
+    --shadow-color:rgb(0,0,0,0.2);
+    --primary-color:rgb(255,0,86);
+    --text-color:#0A0A0A;
+    --text-light:#575757;
+    --font-size:16px;
+    --animation-speed:1;
+}
+@function getAnimationDuration($duration:number){
+    @return calc($duration*var(--animation-speed));
+}
+
+@import "partials/herosection.scss";
+@import "partials/improve-skill.scss";
+@import "partials/quote-section.scss";
+@import "partials/chief-section.scss";
+@import "partials/footer.scss";
+@import "partials/navbar.scss";
+@import "partials/animation.scss";
+@import "partials/previoussearchs.scss";
+@import "partials/recipes-card.scss";
+
+.d-block{
+margin-top: 1em;
+margin-bottom: 2em;
+}
+
+.options-container{
+    margin: 1em;
+    
+    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1em;
+    border-radius: 5px;
+    border-left: .5em solid var(--primary-color);
+    background-color: var(--background-color);
+    display: flex;
+    gap: 1em;
+    .option{
+        height: 3.5em;
+        width: 3.5em;
+        border-radius: 0 3px 6px var(--shadow-color);
+        box-shadow: 0 5px 10px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.light{
+            background-color: #fff;
+        }
+        &.dark{
+            background-color: #000;
+        }
+        .check{
+            height: 2.5em;
+            width: 2.5em;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+           svg{
+                height: 1.5em;
+                width: 1.5em;
+                
+            }
+        }
+       
+    }
+    .btn span {
+        display: inline-block;
+        margin-left: .5em;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img {
+    object-fit: cover;
+}
+.container {
+    padding-inline: 25vw; ;
+}
+
+.main{
+    padding-block: 3vw;
+    padding-top: 55px;
+}
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: .75em 1em;
+    text-transform: uppercase;
+    font-weight:bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    &:hover{
+        box-shadow: 0 1px 3px var(--shadow-color);
+
+    }
+}
+@media screen and (max-width:1280px) {
+    .container {
+        padding-inline: 18vw; ;
+    }
+}
+@media screen and (max-width:1050px) {
+    .container {
+        padding-inline: 12vw; ;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navbar{
+        .nav-links{
+            display: none;
+        }
+    
+    .sidebar-btn{
+        display: block;
+    }
+}
+.section{
+    .col{
+        width: 100%;
+        padding: 0 !important;
+        text-align: center;
+        margin-bottom: 2em;
+        }
+    }
+ .skill-item{
+    display: inline-block;
+    margin: 1em;
+}
+.section.improve-skills .btn{ 
+    display: block;
+    margin-left: 50%;
+    transform: translate(-50%);
+
+}
+.container {
+    padding-inline: 6vw; ;
+}
+.chief-card{
+    box-shadow: 0 5px 10px var(--shadow-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+}
+@media screen and (max-width:480px) {
+    .container {
+        padding-inline: 3vw; ;
+    }
+}
